@@ -14,7 +14,7 @@ namespace KG\DigiDoc\Tests\Ocsp;
 use KG\DigiDoc\Ocsp\Request;
 use org\bovigo\vfs\vfsStream;
 
-class RequestTest extends \PHPUnit_Framework_TestCase
+class RequestTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @expectedException KG\DigiDoc\Exception\FileNotFoundException

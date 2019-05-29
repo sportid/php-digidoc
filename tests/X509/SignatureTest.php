@@ -13,7 +13,7 @@ namespace KG\DigiDoc\Tests\X509;
 
 use KG\DigiDoc\X509\Signature;
 
-class SignatureTest extends \PHPUnit_Framework_TestCase
+class SignatureTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @expectedException \InvalidArgumentException

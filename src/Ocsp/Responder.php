@@ -83,7 +83,7 @@ class Responder
      */
     private function makeRequest(Request $request)
     {
-        $pathToResponse = tempnam($this->tempDir, 'php-digidoc');
+        $pathToResponse = @tempnam($this->tempDir, 'php-digidoc');
 
         $process = $this->createProcess($request, $pathToResponse);
         $process->run();

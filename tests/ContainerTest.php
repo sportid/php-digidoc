@@ -16,7 +16,7 @@ use KG\DigiDoc\Container;
 /**
  * @deprecated Deprecated since version 0.1.2, to be removed in 1.0.0
  */
-class ContainerTest extends \PHPUnit_Framework_TestCase
+class ContainerTest extends \PHPUnit\Framework\TestCase
 {
     public function testGetSignatureReturnsNullIfNoSuchId()
     {
@@ -48,7 +48,7 @@ class ContainerTest extends \PHPUnit_Framework_TestCase
         return $this
             ->getMockBuilder('KG\DigiDoc\Session')
             ->disableOriginalConstructor()
-            ->getMock()
+            ->createMock()
         ;
     }
 
@@ -60,7 +60,7 @@ class ContainerTest extends \PHPUnit_Framework_TestCase
         return $this
             ->getMockBuilder('KG\DigiDoc\Signature')
             ->disableOriginalConstructor()
-            ->getMock()
+            ->createMock()
         ;
     }
 }

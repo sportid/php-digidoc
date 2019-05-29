@@ -13,7 +13,7 @@ namespace KG\DigiDoc\Tests;
 
 use KG\DigiDoc\Encoder;
 
-class EncoderTest extends \PHPUnit_Framework_TestCase
+class EncoderTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var string[]

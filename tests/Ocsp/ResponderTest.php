@@ -16,7 +16,7 @@ use KG\DigiDoc\Ocsp\Responder;
 use org\bovigo\vfs\vfsStream;
 use phpseclib\File\ASN1 as Asn1Parser;
 
-class ResponderTest extends \PHPUnit_Framework_TestCase
+class ResponderTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @expectedException KG\DigiDoc\Exception\FileNotFoundException
@@ -46,7 +46,6 @@ class ResponderTest extends \PHPUnit_Framework_TestCase
             ->method('setCommandLine')
             ->with($this->matchesRegularExpression($expectedCommandLine))
         ;
-
 
         $request = $this->getMockRequest();
         $request->method('getPathToClientCert')->willReturn($pathToClientCert);
@@ -120,7 +119,7 @@ class ResponderTest extends \PHPUnit_Framework_TestCase
         return $this
             ->getMockBuilder('Symfony\Component\Process\Process')
             ->disableOriginalConstructor()
-            ->getMock()
+            ->createMock()
         ;
     }
 
@@ -129,7 +128,7 @@ class ResponderTest extends \PHPUnit_Framework_TestCase
         return $this
             ->getMockBuilder('KG\DigiDoc\Ocsp\Request')
             ->disableOriginalConstructor()
-            ->getMock()
+            ->createMock()
         ;
     }
 

@@ -15,7 +15,7 @@ use KG\DigiDoc\Ocsp\Asn1;
 use KG\DigiDoc\Ocsp\Response;
 use phpseclib\File\ASN1 as Asn1Parser;
 
-class ResponseTest extends \PHPUnit_Framework_TestCase
+class ResponseTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @expectedException \InvalidArgumentException
@@ -119,7 +119,7 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
         return $this
             ->getMockBuilder('KG\DigiDoc\X509\Cert')
             ->disableOriginalConstructor()
-            ->getMock()
+            ->createMock()
         ;
     }
 }

@@ -13,7 +13,7 @@ namespace KG\DigiDoc\tests;
 
 use KG\DigiDoc\Envelope;
 
-class EnvelopeTest extends \PHPUnit_Framework_TestCase
+class EnvelopeTest extends \PHPUnit\Framework\TestCase
 {
     public function testGetSignatureReturnsNullIfNoSuchId()
     {
@@ -45,7 +45,7 @@ class EnvelopeTest extends \PHPUnit_Framework_TestCase
         return $this
             ->getMockBuilder('KG\DigiDoc\Session')
             ->disableOriginalConstructor()
-            ->getMock()
+            ->createMock()
         ;
     }
 
@@ -57,7 +57,7 @@ class EnvelopeTest extends \PHPUnit_Framework_TestCase
         return $this
             ->getMockBuilder('KG\DigiDoc\Signature')
             ->disableOriginalConstructor()
-            ->getMock()
+            ->createMock()
         ;
     }
 }

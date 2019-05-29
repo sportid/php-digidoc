@@ -14,7 +14,7 @@ namespace KG\DigiDoc\Tests\ApiTest;
 use KG\DigiDoc\Api;
 use KG\DigiDoc\Envelope;
 
-class ApiTest extends \PHPUnit_Framework_TestCase
+class ApiTest extends \PHPUnit\Framework\TestCase
 {
     public function testCreateCreatesNewEnvelope()
     {
@@ -184,7 +184,7 @@ class ApiTest extends \PHPUnit_Framework_TestCase
         return $this
             ->getMockBuilder('KG\DigiDoc\Envelope')
             ->disableOriginalConstructor()
-            ->getMock()
+            ->createMock()
         ;
     }
 
@@ -196,7 +196,7 @@ class ApiTest extends \PHPUnit_Framework_TestCase
         return $this
             ->getMockBuilder('KG\DigiDoc\Certificate')
             ->disableOriginalConstructor()
-            ->getMock()
+            ->createMock()
         ;
     }
 
@@ -207,7 +207,7 @@ class ApiTest extends \PHPUnit_Framework_TestCase
     {
         return $this
             ->getMockBuilder('KG\DigiDoc\Soap\Client')
-            ->getMock()
+            ->createMock()
         ;
     }
 
@@ -219,7 +219,7 @@ class ApiTest extends \PHPUnit_Framework_TestCase
         return $this
             ->getMockBuilder('KG\DigiDoc\Soap\Wsdl\DataFileInfo')
             ->disableOriginalConstructor()
-            ->getMock()
+            ->createMock()
         ;
     }
 
@@ -228,7 +228,7 @@ class ApiTest extends \PHPUnit_Framework_TestCase
      */
     private function getMockEncoder()
     {
-        return $this->getMock('KG\DigiDoc\Encoder');
+        return $this->createMock('KG\DigiDoc\Encoder');
     }
 
     /**
@@ -239,7 +239,7 @@ class ApiTest extends \PHPUnit_Framework_TestCase
         return $this
             ->getMockBuilder('KG\DigiDoc\Soap\Wsdl\SignedDocInfo')
             ->disableOriginalConstructor()
-            ->getMock()
+            ->createMock()
         ;
     }
 
@@ -251,7 +251,7 @@ class ApiTest extends \PHPUnit_Framework_TestCase
         return $this
             ->getMockBuilder('KG\DigiDoc\Session')
             ->disableOriginalConstructor()
-            ->getMock()
+            ->createMock()
         ;
     }
 
@@ -263,7 +263,7 @@ class ApiTest extends \PHPUnit_Framework_TestCase
         return $this
             ->getMockBuilder('KG\DigiDoc\Signature')
             ->disableOriginalConstructor()
-            ->getMock()
+            ->createMock()
         ;
     }
 
@@ -275,7 +275,7 @@ class ApiTest extends \PHPUnit_Framework_TestCase
         return $this
             ->getMockBuilder('KG\DigiDoc\Soap\Wsdl\SignatureInfo')
             ->disableOriginalConstructor()
-            ->getMock()
+            ->createMock()
         ;
     }
 
@@ -284,7 +284,7 @@ class ApiTest extends \PHPUnit_Framework_TestCase
      */
     private function getMockTracker()
     {
-        return $this->getMock('KG\DigiDoc\Tracker');
+        return $this->createMock('KG\DigiDoc\Tracker');
     }
 
     /**

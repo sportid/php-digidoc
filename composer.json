@@ -14,15 +14,16 @@
     "require": {
         "php": ">=5.3.8",
         "ext-soap": "*",
-        "symfony/http-foundation": "~2.0",
+        "symfony/http-foundation": "~4.0",
         "ext-zip": "*",
         "doctrine/collections": "~1.0",
-        "symfony/process": "~2.0",
-        "phpseclib/phpseclib": "dev-php5"
+        "symfony/process": "~4.0",
+        "phpseclib/phpseclib": "*"
     },
     "require-dev": {
+        "phpunit/phpunit": "^7.0",
         "wsdl2phpgenerator/wsdl2phpgenerator": "~2.3",
-        "mikey179/vfsStream": "~1.4"
+        "mikey179/vfsstream": "~1.4"
     },
     "autoload": {
         "psr-4": { "KG\\DigiDoc\\": "src/" }

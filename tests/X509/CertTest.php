@@ -13,10 +13,10 @@ namespace KG\DigiDoc\Tests\X509;
 
 use KG\DigiDoc\X509\Cert;
 
-class CertTest extends \PHPUnit_Framework_TestCase
+class CertTest extends \PHPUnit\Framework\TestCase
 {
     /**
-     * @expectedException \PHPUnit_Framework_Error
+     * @expectedException \PHPUnit\Framework\Error\Error
      * @expectedExceptionMessage openssl_x509_read(): supplied parameter cannot be coerced into an X509 certificate!
      */
     public function testConstructFailsIfInvalidCert()
@@ -81,7 +81,7 @@ class CertTest extends \PHPUnit_Framework_TestCase
         return $this
             ->getMockBuilder('KG\DigiDoc\X509\Signature')
             ->disableOriginalConstructor()
-            ->getMock()
+            ->createMock()
         ;;
     }
 

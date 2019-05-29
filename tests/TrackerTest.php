@@ -13,7 +13,7 @@ namespace KG\DigiDoc\Tests;
 
 use KG\DigiDoc\Tracker;
 
-class TrackeTest extends \PHPUnit_Framework_TestCase
+class TrackeTest extends \PHPUnit\Framework\TestCase
 {
     public function testAddSingleObject()
     {

@@ -14,7 +14,7 @@ namespace KG\DigiDoc\Tests;
 use KG\DigiDoc\Signature;
 use KG\DigiDoc\Soap\Wsdl\SignatureInfo;
 
-class SignatureTest extends \PHPUnit_Framework_TestCase
+class SignatureTest extends \PHPUnit\Framework\TestCase
 {
     public function testSignatureCreatedFromSoapIsSealed()
     {
@@ -53,7 +53,7 @@ class SignatureTest extends \PHPUnit_Framework_TestCase
         return $this
             ->getMockBuilder('KG\DigiDoc\Certificate')
             ->disableOriginalConstructor()
-            ->getMock()
+            ->createMock()
         ;
     }
 
@@ -62,7 +62,7 @@ class SignatureTest extends \PHPUnit_Framework_TestCase
         return $this
             ->getMockBuilder('KG\DigiDoc\Soap\Wsdl\SignatureInfo')
             ->disableOriginalConstructor()
-            ->getMock()
+            ->createMock()
         ;
     }
 }
